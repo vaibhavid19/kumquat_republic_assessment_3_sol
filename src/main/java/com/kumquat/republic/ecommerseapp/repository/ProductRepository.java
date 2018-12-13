@@ -8,11 +8,12 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+@Repository
 public class ProductRepository {
 
-    private static List<Product> products;
+    private List<Product> products;
 
-    public static List<Product> getProductlist() {
+    public List<Product> getProductlist() {
         products = Arrays.asList(
                 new Product("dresses", "Gucci", 	"yellow", 2272.00),
                 new Product("dresses", "Mark Jacobs", 	"Red", 72.00),
