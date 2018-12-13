@@ -69,8 +69,7 @@ public class ProductControllerTests {
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$", hasSize(2)))
-                .andDo(print())
-                .andReturn();
+                .andExpect(jsonPath("$[0].brand", is("Gucci")));
 
         verify(productRepository, times(1)).getProductlist();
         verifyNoMoreInteractions(productRepository);
